@@ -30,7 +30,7 @@ export default function NotFoundPage() {
   };
 
   const { rive, RiveComponent } = useRive({
-    src: "/rive/404.riv",
+    src: "/rivefiles/404.riv",
     stateMachines: "State Machine 1",
     autoplay: true,
   });

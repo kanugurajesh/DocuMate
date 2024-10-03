@@ -1,5 +1,3 @@
-"use client"
-
 import { useCallback } from "react";
 import { useRive, useStateMachineInput } from "@rive-app/react-canvas";
 
@@ -32,12 +30,12 @@ export default function RiveButton() {
         className="text-white text-5xl lg:text-6xl pb-2"
         style={{ textShadow: "1px 1px 1px rgba(0, 0, 0, 0.5)" }}
       >
-        Explore
+        ResuMate
       </h1>
       <div className="rive-button-container relative w-3/4 pt-[37.88%] mx-auto">
         <div className="absolute top-0 left-0 bottom-0 right-0">
           <a
-            href="/Home"
+            href="/home"
             aria-label="Start now; explore the Rive.app homepage"
             className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center w-full h-full bg-transparent text-white text-sm lg:text-lg"
             style={{ textShadow: "1px 1px 1px rgba(0, 0, 0, 0.5)" }}
@@ -46,7 +44,7 @@ export default function RiveButton() {
             onFocus={onButtonActivate}
             onBlur={onButtonDeactivate}
           >
-            START NOW
+            Chat Now
           </a>
           <RiveComponent aria-hidden="true" />
         </div>
