@@ -8,6 +8,7 @@ import animationArrowOrange from "@/public/lottifiles/arrow-left-orange.json";
 import { useState } from "react";
 
 export default function NotFoundPage() {
+  
   const [hover, setHover] = useState<boolean>(false);
 
   const arrowWhiteOptions = {

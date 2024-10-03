@@ -33,15 +33,21 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
+        <link
+          rel="preload"
+          href="/rivefiles/hero_use_case.riv"
+          as="fetch"
+          crossOrigin="anonymous"
+        />
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
           {/* <SignedOut>
             <SignInButton />
-          </SignedOut>
+          </SignedOut> */}
           <SignedIn>
             <UserButton />
-          </SignedIn> */}
+          </SignedIn>
           {children}
         </body>
       </html>
