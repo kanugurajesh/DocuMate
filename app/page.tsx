@@ -1,3 +1,5 @@
+"use client"
+
 import Rive, { useRive } from "@rive-app/react-canvas";
 
 export default function Home() {
