@@ -1,6 +1,6 @@
 "use client";
 
-import Rive, { useRive } from "@rive-app/react-canvas";
+import { useRive } from "@rive-app/react-canvas";
 import Link from "next/link";
 import Lottie from "react-lottie";
 import animationArrowWhite from "@/public/lottifiles/arrow-left-white.json";
@@ -29,7 +29,7 @@ export default function NotFoundPage() {
     },
   };
 
-  const { rive, RiveComponent } = useRive({
+  const { RiveComponent } = useRive({
     src: "/rivefiles/404.riv",
     stateMachines: "State Machine 1",
     autoplay: true,
