@@ -1,54 +1,77 @@
 "use client";
 
-import { useState, ChangeEvent, FormEvent } from "react";
+import { FilePond } from "react-filepond";
+import "filepond/dist/filepond.min.css";
+import { useState } from "react";
+import Lottie from "react-lottie";
+import animationUpload from "@/public/lottifiles/upload-file.json";
 import toast, { Toaster } from "react-hot-toast";
 
-export default function UploadPDF() {
-  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+export default function FileUpload() {
+  const [fileResponse, setFileResponse] = useState(null);
 
-  const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files) {
-      setSelectedFile(e.target.files[0]); // Get the file
-    }
+  const uploadOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationUpload,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
   };
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    if (!selectedFile) {
-      toast.error("Please select a file first.");
-      return;
+  const Notify = (status:string, message:string) => {
+    toast.dismiss();
+    if (status === "success") {
+      toast.success(message);
+    } else {
+      toast.error(message);
     }
-
-    // Create a FormData object
-    const formData = new FormData();
-    formData.append("pdf", selectedFile); // Append the file to the form data
-
-    try {
-      const response = await fetch("/api/response", {
-        method: "POST",
-        body: formData, // Send the form data with the file
-      });
-
-      console.log(response)
-
-      if (response.ok) {
-        toast.success("File uploaded successfully");
-      } else {
-        toast.error("File upload failed");
-      }
-    } catch (error) {
-      console.error("Error uploading file:", error);
-    }
-  };
+  }
 
   return (
     <div>
       <Toaster />
-      <form onSubmit={handleSubmit}>
-        <input type="file" accept=".pdf" onChange={handleFileChange} />
-        <button type="submit">Upload PDF</button>
-      </form>
+      <div>
+        <FilePond
+          server={{
+            process: {
+              url: "/api/upload",
+              method: "POST",
+              withCredentials: false,
+              onload: (response) => {
+                // parse the json response
+                const fileResponse = JSON.parse(response);
+                console.log(fileResponse);
+                setFileResponse(fileResponse);
+                return response; // Return the response to FilePond
+              },
+              onerror: (response) => {
+                console.error("Upload error:", response);
+                return response; // Return the error to FilePond
+              },
+            },
+            fetch: null,
+            revert: null,
+          }}
+        />
+      </div>
+      <div>
+        {fileResponse ? (
+          <div>
+            <h2>File uploaded successfully!</h2>
+            <p>File Name: {fileResponse.fileName}</p>
+            <p>Text: {fileResponse.parsedText}</p>
+          </div>
+        ) : (
+          <div className="flex flex-col gap-2 justify-center items-center">
+            <h2 className="font-bold mt-10">Upload a file to chat</h2>
+            <p>Supported file types: PDF</p>
+            <div className="h-[260px] w-[260px]" onClick={() => Notify("success", "upload a pdf")}>
+              <Lottie options={uploadOptions} height={260} width={260} />
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
