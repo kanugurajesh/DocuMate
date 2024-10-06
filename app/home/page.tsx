@@ -43,7 +43,7 @@ export default function Home() {
         <h1 className="w-2/3 text-center text-2xl font-semibold tracking-wider">
           Seamlessly interact with any PDF using AI.
         </h1>
-        <p className="text-[#707589] text-lg font-medium w-2/3 text-center">
+        <p className="w-11/12 text-[#707589] text-lg font-medium text-center">
           Upload your PDF and instantly receive answers to all your questions
           related to its content 🚀.
         </p>
