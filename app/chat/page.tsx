@@ -14,7 +14,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import ModeToggle from "@/components/color-toggle";
 import { cn } from "@/lib/utils";
-import styles from "../styles/styles.module.css";
+import styles from "@/styles/styles.module.css";
 import { HoverInfo } from "@/components/HoverInfo";
 import { Audio } from "react-loader-spinner";
 
@@ -186,11 +186,10 @@ export default function FileUpload() {
           }}
         />
       </div>
-      <div>
+      <div className="relative">
         {fileResponse ? (
           <div>
-            <h2>File uploaded successfully!</h2>
-            <main className={`flex flex-col items-center h-screen gap-4`}>
+            <main className={`flex flex-col items-center gap-4`}>
               <HoverInfo
                 showHoverInfo={showHoverInfo}
                 setShowHoverInfo={setShowHoverInfo}
