@@ -168,6 +168,10 @@ export default function FileUpload() {
       <Toaster />
       <div>
         <FilePond
+          onaddfile={() => {
+            toast.dismiss();
+            toast.loading("file processing...");
+          }}
           server={{
             process: {
               url: "/api/upload",
@@ -176,10 +180,14 @@ export default function FileUpload() {
               onload: (response) => {
                 // parse the json response
                 const fileResponse = JSON.parse(response);
+                toast.dismiss();
+                toast.success("file processed");
                 setFileResponse(fileResponse);
                 return response; // Return the response to FilePond
               },
               onerror: (response) => {
+                toast.dismiss();
+                toast.error('file processing failed')
                 return response; // Return the error to FilePond
               },
             },
@@ -206,11 +214,7 @@ export default function FileUpload() {
               >
                 <ModeToggle setScreenColor={setScreenColor} />
               </div>
-              <div className="flex gap-2 items-center mb-6 mt-12">
-                <MessageCircleCode size="64" />
-                <span className="text-3xl font-bold">Chaty</span>
-              </div>
-              <div className="flex gap-2 items-center">
+              <div className="flex gap-2 items-center mt-24">
                 <div className="relative">
                   <Input
                     type="text"
