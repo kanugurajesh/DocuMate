@@ -30,7 +30,7 @@ export default function RiveButton() {
         className="text-white text-5xl lg:text-6xl pb-2"
         style={{ textShadow: "1px 1px 1px rgba(0, 0, 0, 0.5)" }}
       >
-        ResuMate
+        DocuMate
       </h1>
       <div className="rive-button-container relative w-3/4 pt-[37.88%] mx-auto">
         <div className="absolute top-0 left-0 bottom-0 right-0">
@@ -44,7 +44,7 @@ export default function RiveButton() {
             onFocus={onButtonActivate}
             onBlur={onButtonDeactivate}
           >
-            Chat Now
+            Start now
           </a>
           <RiveComponent aria-hidden="true" />
         </div>

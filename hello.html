@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextShine.ai Background</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: radial-gradient(circle, rgba(7,9,24,1) 0%, rgba(18,23,43,1) 100%);
+            background-size: 20px 20px;
+            position: relative;
+            color: white;
+            overflow: hidden;
+        }
+
+        .background-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 15px 15px;
+            pointer-events: none;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .input-area {
+            margin: 20px 0;
+        }
+
+        textarea {
+            width: 100%;
+            max-width: 600px;
+            height: 100px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4b42f5;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background-color: #3332f3;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="background-pattern"></div>
+
+    <div class="container">
+        <div class="logo">TextShine.ai</div>
+        <h1>AI Support for your writing</h1>
+        <p>Unlock Your Writing Magic. Effortlessly refine your messages.</p>
+        <div class="input-area">
+            <textarea placeholder="Start Writing..."></textarea>
+            <br>
+            <button>Generate ✨</button>
+        </div>
+    </div>
+
+</body>
+</html>
