@@ -5,10 +5,13 @@ import Link from "next/link";
 import Lottie from "react-lottie";
 import animationArrowWhite from "@/public/lottie/arrow-left-white.json";
 import animationArrowOrange from "@/public/lottie/arrow-left-orange.json";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function NotFoundPage() {
-  
+  const router = useRouter();
+
   const [hover, setHover] = useState<boolean>(false);
 
   const arrowWhiteOptions = {
@@ -35,8 +38,17 @@ export default function NotFoundPage() {
     autoplay: true,
   });
 
+  useEffect(() => {
+    toast.dismiss();
+    toast.error("Page not found. Redirecting to home page...");
+    setTimeout(() => {
+      router.push("/home");
+    }, 3000);
+  }, []);
+
   return (
     <div className="h-screen bg-black relative">
+      <Toaster />
       <Link
         href="/"
         className="absolute left-4 top-4 bg-[#ff725e] border-2 border-[#ff725e] text-white p-2 rounded-md font-semibold hover:bg-white hover:text-[#ff725e] transition-all ease-in-out duration-300 flex items-center gap-[2px]"
