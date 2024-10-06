@@ -3,8 +3,8 @@
 import { useRive } from "@rive-app/react-canvas";
 import Link from "next/link";
 import Lottie from "react-lottie";
-import animationArrowWhite from "@/public/lottifiles/arrow-left-white.json";
-import animationArrowOrange from "@/public/lottifiles/arrow-left-orange.json";
+import animationArrowWhite from "@/public/lottie/arrow-left-white.json";
+import animationArrowOrange from "@/public/lottie/arrow-left-orange.json";
 import { useState } from "react";
 
 export default function NotFoundPage() {

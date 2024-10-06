@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
 
   try {
     const result = await model.generateContent(userPrompt);
-    const response = await result.response;
+    const response = result.response;
     const text = response.text();
     return NextResponse.json({
       text,
@@ -22,6 +22,7 @@ export async function POST(req: NextRequest) {
   } catch (error) {
     return NextResponse.json({
       text: "Unable to process the prompt. Please try again.",
+      error
     });
   }
 }

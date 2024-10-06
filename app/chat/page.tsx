@@ -4,7 +4,7 @@ import { FilePond } from "react-filepond";
 import "filepond/dist/filepond.min.css";
 import { useState, useEffect } from "react";
 import Lottie from "react-lottie";
-import animationUpload from "@/public/lottifiles/upload-file.json";
+import animationUpload from "@/public/lottie/upload-file.json";
 import toast, { Toaster } from "react-hot-toast";
 import Markdown from "react-markdown";
 import { Input } from "@/components/ui/input";
@@ -73,8 +73,7 @@ export default function FileUpload() {
     reader.readAsText(file, "UTF-8");
     // On reader load
     reader.onload = (readerEvent) => {
-      // Set the prompt to the file content
-      // @ts-ignore
+      // @ts-expect-error - getting unwanted error
       setPrompt(readerEvent.target?.result || "done");
     };
   };
@@ -123,6 +122,7 @@ export default function FileUpload() {
     setLoading(true);
     toast.loading("Chatting with the AI...");
 
+    // @ts-expect-error - fileResponse is getting it can be null error
     const userPrompt = `Answer the question '${prompt}' based on the following text extracted from the provided PDF: ${fileResponse.parsedText}. If you cannot find the data related to the question, please write 'No data found'. If the question is related to summarization, please write a summary of the text.`;
 
     const response = await fetch("api/chat", {
