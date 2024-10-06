@@ -29,7 +29,7 @@ export default function RiveHero() {
     container: canvasContainerRef,
   } = useRive(
     {
-      src: "/rivefiles/hero_use_case.riv",
+      src: "/rive/hero_use_case.riv",
       artboard: "Hero Demo Listeners Resize",
       stateMachines: "State Machine 1",
       layout: new Layout({

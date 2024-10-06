@@ -28,7 +28,7 @@ export default function RootLayout({
     <html lang="en">
       <link
         rel="preload"
-        href="/rivefiles/hero_use_case.riv"
+        href="/rive/hero_use_case.riv"
         as="fetch"
         crossOrigin="anonymous"
       />

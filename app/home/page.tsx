@@ -2,8 +2,8 @@
 
 export default function Home() {
   return (
-    <>
-      <div>In Home</div>
-    </>
+    <div>
+      
+    </div>
   );
 }

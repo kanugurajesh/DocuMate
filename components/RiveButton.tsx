@@ -3,7 +3,7 @@ import { useRive, useStateMachineInput } from "@rive-app/react-canvas";
 
 export default function RiveButton() {
   const { rive, RiveComponent } = useRive({
-    src: "/rivefiles/hero_use_case.riv",
+    src: "/rive/hero_use_case.riv",
     artboard: "Button",
     stateMachines: "State Machine 1",
     autoplay: true,
