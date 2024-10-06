@@ -129,7 +129,11 @@ export default function FileUpload() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        userPrompt: prompt,
+        userPrompt:
+          "Answer the question '" +
+          prompt +
+          "` based on the given text: " +
+          fileResponse.parsedText + "If you cannot find the data related to the question, please write 'No data found'.",
       }),
     });
 
