@@ -122,18 +122,16 @@ export default function FileUpload() {
 
     setLoading(true);
     toast.loading("Chatting with the AI...");
-    // create a post request to the /api/chat endpoint
+
+    const userPrompt = `Answer the question '${prompt}' based on the following text extracted from the provided PDF: ${fileResponse.parsedText}. If you cannot find the data related to the question, please write 'No data found'. If the question is related to summarization, please write a summary of the text.`;
+
     const response = await fetch("api/chat", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        userPrompt:
-          "Answer the question '" +
-          prompt +
-          "` based on the given text: " +
-          fileResponse.parsedText + "If you cannot find the data related to the question, please write 'No data found'.",
+        userPrompt: userPrompt,
       }),
     });
 
