@@ -19,10 +19,18 @@ export default function Home() {
     <div className="relative">
       <div className="absolute top-8 right-6">
         <div className="flex gap-4">
-          <Link href={Data.socials.linkedin} target="__blank" className="hover:scale-105">
+          <Link
+            href={Data.socials.linkedin}
+            target="__blank"
+            className="hover:scale-105"
+          >
             <Image src="/linkedin.png" alt="linkedin" width={26} height={26} />
           </Link>
-          <Link href={Data.socials.github} target="__blank" className="hover:scale-105">
+          <Link
+            href={Data.socials.github}
+            target="__blank"
+            className="hover:scale-105"
+          >
             <Image src="/github.png" alt="linkedin" width={26} height={26} />
           </Link>
         </div>
@@ -32,9 +40,12 @@ export default function Home() {
           className="h-48 w-48 cursor-pointer hover:scale-105 transition-all ease-in-out duration-400"
           onClick={() => router.push("/chat")}
         />
-        <h1 className="w-2/3 text-center text-2xl font-semibold tracking-wider">Easily interact with any pdf With ai</h1>
+        <h1 className="w-2/3 text-center text-2xl font-semibold tracking-wider">
+          Seamlessly interact with any PDF using AI.
+        </h1>
         <p className="text-[#707589] text-lg font-medium w-2/3 text-center">
-          Upload your pdf and get answers to all your questions instantly 🚀 related to the Pdf.
+          Upload your PDF and instantly receive answers to all your questions
+          related to its content 🚀.
         </p>
         <div className="flex gap-4 items-center">
           <Link
