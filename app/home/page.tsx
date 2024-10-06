@@ -40,10 +40,10 @@ export default function Home() {
           className="h-48 w-48 cursor-pointer hover:scale-105 transition-all ease-in-out duration-400"
           onClick={() => router.push("/chat")}
         />
-        <h1 className="w-2/3 text-center text-2xl font-semibold tracking-wider">
+        <h1 className="w-2/3 text-center text-2xl font-semibold tracking-wider sm:text-3xl">
           Seamlessly interact with any PDF using AI.
         </h1>
-        <p className="w-11/12 text-[#707589] text-lg font-medium text-center">
+        <p className="w-11/12 leading-6 text-base font-medium text-center sm:text-lg text-gray-600">
           Upload your PDF and instantly receive answers to all your questions
           related to its content 🚀.
         </p>
