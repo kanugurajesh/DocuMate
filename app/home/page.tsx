@@ -16,7 +16,7 @@ export default function Home() {
   });
 
   return (
-    <div className="relative">
+    <div className="relative xl:max-w-7xl mx-auto">
       <div className="absolute top-8 right-6">
         <div className="flex gap-4">
           <Link
