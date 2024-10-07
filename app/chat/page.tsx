@@ -11,7 +11,6 @@ import { Input } from "@/components/ui/input";
 import { Upload, Send, Copy, Download } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import ModeToggle from "@/components/color-toggle";
 import { cn } from "@/lib/utils";
 import styles from "@/styles/styles.module.css";
 import { HoverInfo } from "@/components/HoverInfo";
