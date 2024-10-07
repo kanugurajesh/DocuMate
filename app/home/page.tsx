@@ -40,7 +40,7 @@ export default function Home() {
           className="h-48 w-48 cursor-pointer hover:scale-105 transition-all ease-in-out duration-400"
           onClick={() => router.push("/chat")}
         />
-        <h1 className="text-center text-gray-900 font-medium tracking-wider text-3xl sm:text-6xl animate-text-gradient inline-flex bg-gradient-to-r from-neutral-900 via-slate-500 to-neutral-500 bg-[200%_auto] bg-clip-text text-transparent dark:from-neutral-100 dark:via-slate-400 dark:to-neutral-400 leading-tight">
+        <h1 className="text-center font-medium tracking-wider text-3xl sm:text-6xl leading-tight text-gray-900">
           Seamlessly interact with any pdf using ai.
         </h1>
         <p className="w-11/12 leading-6 text-lg text-center text-gray-600 mt-6">
