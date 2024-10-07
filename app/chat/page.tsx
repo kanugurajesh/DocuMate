@@ -186,7 +186,7 @@ export default function FileUpload() {
               },
               onerror: (response) => {
                 toast.dismiss();
-                toast.error('file processing failed')
+                toast.error("file processing failed");
                 return response; // Return the error to FilePond
               },
             },
@@ -203,16 +203,6 @@ export default function FileUpload() {
                 showHoverInfo={showHoverInfo}
                 setShowHoverInfo={setShowHoverInfo}
               />
-              <div
-                className="absolute top-5 right-5"
-                onMouseEnter={() =>
-                  showHoverNotification(
-                    "Click to change screen between black and white"
-                  )
-                }
-              >
-                <ModeToggle setScreenColor={setScreenColor} />
-              </div>
               <div className="flex gap-2 items-center mt-24">
                 <div className="relative">
                   <Input
