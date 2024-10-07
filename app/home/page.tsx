@@ -56,7 +56,7 @@ export default function Home() {
           </Link>
           <Link
             href="/chat"
-            className="bg-white p-3 px-5 rounded-md text-lg border-2 border-black font-semibold tracking-wider hover:text-white hover:bg-black transition-all ease-in-out duration-300 sm:px-7"
+            className="bg-white p-3 px-5 text-black rounded-md text-lg border-2 border-black font-semibold tracking-wider hover:text-white hover:bg-black transition-all ease-in-out duration-300 sm:px-7"
           >
             To App ➡
           </Link>
