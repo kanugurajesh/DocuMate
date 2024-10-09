@@ -72,3 +72,6 @@ Start interacting with your documents now!
 ![Screenshot 2024-10-09 142056](https://github.com/user-attachments/assets/e04d3dfe-dffa-4ba0-9c20-d20a6195046a)
 ![Screenshot 2024-10-09 142116](https://github.com/user-attachments/assets/cc33a3ee-002f-4dd2-b3f1-7366003cdbbe)
 ![Screenshot 2024-10-09 142128](https://github.com/user-attachments/assets/0133cd51-a94d-4444-b2e4-d4d0fb8a7dc2)
+
+## Demo
+[![DocuMate](https://img.youtube.com/vi/JoJs7PH97nU/0.jpg)](https://www.youtube.com/watch?v=JoJs7PH97nU)
