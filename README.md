@@ -31,6 +31,39 @@ Seamlessly interact with any pdf using ai. Upload your PDF and instantly receive
 
 Start interacting with your documents now!
 
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/DocuMate.git
+   ```
+2. Change the directory
+   ```bash
+   cd MoodMap
+   ```
+3. Copy the environment variables
+   ```bash
+   cp .env.example .env.local
+   ```
+4. Add the environment variables
+   
+6. Install the packages
+   ```bash
+   npm install
+   ```
+7. Run the project
+   ```bash
+   npm run dev
+   ```
+
+## TechStack
+
+1. Next.js
+2. Typescript
+3. Tailwind.css
+4. Gemini LLM
+7. Shadcdn-ui
+
 ## Images
 
 ![Screenshot 2024-10-09 142020](https://github.com/user-attachments/assets/aa4f0985-1174-4d50-9dc6-4e631bb0de69)
