@@ -62,6 +62,8 @@ Start interacting with your documents now!
 2. Typescript
 3. Tailwind.css
 4. Gemini LLM
+5. Lottie Animation
+6. Rive Animation
 7. Shadcdn-ui
 
 ## Images
