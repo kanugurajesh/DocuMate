@@ -1,5 +1,13 @@
 # DocuMate
 
+🌟 star the repo if you like it
+
+<div align=center>
+  <img src="https://github.com/user-attachments/assets/a03a4191-6cd7-4292-b206-15de725f8bd5" alt="documate" width=100 height=100 />
+</div>
+
+<br />
+
 Seamlessly interact with any pdf using ai. Upload your PDF and instantly receive answers to all your questions related to its content 🚀.
 
 ## Images
