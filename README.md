@@ -61,16 +61,16 @@ Start interacting with your documents now!
    ```bash
    npm run dev
    ```
-
-## TechStack
-
-1. Next.js
-2. Typescript
-3. Tailwind.css
-4. Gemini LLM
-5. Lottie Animation
-6. Rive Animation
-7. Shadcdn-ui
+   
+## 🧰 Tech Stack
+🖥️ **Frontend**: Next.js, TypeScript, Tailwind CSS
+<br>
+🤖 **AI**: Gemini LLM
+<br>
+🎨 **Animations**: Lottie Animation, Rive Animation
+<br>
+📦 **UI Library**: Shadcdn-ui
+<br>
 
 ## Images
 
